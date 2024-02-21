@@ -16,29 +16,27 @@ while True:
     print("4. Add a Nickname")
     print("5. Remove a Nickname")
     print("6. Exit")
-
     choice = input("Menu Option: ")
 
     if choice == "1":
-        
         # Change name
         first_name = input("Please enter first name: ")
         last_name = input("Please enter last name: ")
         print("Name has been changed to " + first_name + " " + last_name + ".")
+    
     elif choice == "2":
-        
         # Display a random nickname
         random_nickname = random.choice(nicknames)
         print("\nRANDOM NICKNAME")
         print(first_name + " '" + random_nickname + "' " + last_name + ".")
+   
     elif choice == "3":
-        
         # Display all nicknames
         print("\nALL NICKNAMES")
         for nickname in nicknames:
             print(first_name + " '" + nickname + "' " + last_name + ".")
+    
     elif choice == "4":
-        
         # Add a nickname
         new_nickname = input("Please enter a nickname to add: ")
         if new_nickname in nicknames:
@@ -46,8 +44,8 @@ while True:
         else:
             nicknames.append(new_nickname)
             print(new_nickname + " added to the nickname list.")
+   
     elif choice == "5":
-        
         # Remove a nickname
         nickname_to_remove = input("Please enter a nickname to remove: ")
         if nickname_to_remove in nicknames:
@@ -55,8 +53,8 @@ while True:
             print(nickname_to_remove + " removed from the nickname list.")
         else:
             print(nickname_to_remove + " was not found in the nickname list.")
+   
     elif choice == "6":
-        
         # Exit
         print("Goodbye!") 
         exit()
